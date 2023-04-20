@@ -15,25 +15,25 @@ $userAge = intval($_POST["user-age"]);
 if ($userAge >= FIRST_THRESHOLD) {
     $message = "You are old enough to see an R-rated movie on your own without supervision.";
 }
-  
+
 // Otherwise, if age is greater than or equal to 13, display that they can see a PG-13 movie alone.
 elseif ($userAge >= SECOND_THRESHOLD) {
     $message = "You can watch a PG-13 movie alone.";
 }
-  
+
 // Otherwise, if age is greater than or equal to 5, display that they can see a G or PG movie alone.
 elseif ($userAge >= THIRD_THRESHOLD) {
     $message = "You can see a G or PG movie on your own.";
 }
-  
+
 // Otherwise, if age is less than 0, display that they must enter a valid age
-elseif($userAge < 0) {
-    $message = "Please enter a valid number for your age."
+elseif ($userAge < 0) {
+    $message = "Please enter a valid number for your age.";
 }
-  
+
 // Otherwise, if nothing is entered, display that they msut enter their age
-elseif($userAge == "") {
-    $message = "Please enter your age."
+elseif (empty($userAge)) {
+    $message = "Please enter something for your age.";
 }
 
 //else (any age less than 5)
